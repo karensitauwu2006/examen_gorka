@@ -78,7 +78,6 @@ def fn_RegistrarIncidencia_lst(mensaje_str, historial_lst=[]):
     Si no se indica ningún historial, se empieza uno nuevo (vacío).
     """
     historial_lst.append(mensaje_str)
-
     return historial_lst
 
 
