@@ -86,7 +86,7 @@ def fn_CalcularPrecioConIVA_fl(precio_fl):
     """
     Devuelve el precio de venta al público con el IVA incluido.
     """
-    return precio_fl * (1 + IVA_fl)
+    return precio_fl - (precio_fl * IVA_fl)
 
 
 def main():
@@ -124,7 +124,6 @@ def main():
     incidencias_norte_lst = fn_RegistrarIncidencia_lst("Retraso del transportista", incidencias_norte_lst)
     print(f"   Incidencias almacén norte: {len(incidencias_norte_lst)}")
     print(f"   Incidencias almacén sur: {len(incidencias_sur_lst)}")
-
     print("\n5. Precio de venta con IVA...")
     precio_portatil_fl = fn_CalcularPrecioConIVA_fl(600.0)
     print(f"   Portátil: {precio_portatil_fl:.2f}€")
